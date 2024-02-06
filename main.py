@@ -7,7 +7,6 @@ qa_chain = VectorModelClass()
 qa_chain_object = qa_chain.vectorLoadModel
 
 
-# Create a route for the web application
 def generateResponseFromVectorObject(prompt):
     response = qa_chain_object(prompt)
     return response

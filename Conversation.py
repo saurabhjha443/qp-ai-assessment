@@ -11,6 +11,6 @@ class VectorModelClass:
         pages = loader.load_and_split()
 
         vectorstore = Chroma.from_documents(documents=pages, embedding=GPT4AllEmbeddings())
-        docs = vectorstore.similarity_search(question)
+        docs = vectorstore.similarity_search(question,k=3)
         len(docs)
         return docs
